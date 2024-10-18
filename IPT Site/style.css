@@ -41,7 +41,78 @@
     display: flex;
     gap: 15px;
     list-style: none;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
 }
+
+.fundo-lupa .lupa{
+    padding: 7px;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #9B9B9B;
+    color: #9B9B9B;
+}
+
+.fundo .icons{
+    padding: 7px;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #9B9B9B;
+    color: white;
+    background-color: #9B9B9B;
+    gap: 3px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.fundo .icons:hover{
+    color: #9B9B9B;
+    background-color: transparent;
+    border-color: transparent;   
+
+}
+
+.fundo .icons-PH{
+    padding: 7px;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #9B9B9B;
+    color: white;
+    background-color: #9B9B9B;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.fundo .icons-PH:hover{
+    color: #9B9B9B;
+    background-color: transparent;
+    border-color: transparent;   
+
+}
+
+.fundo-blog .blog{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #0082C4 0%, #003C6A 100%);
+    padding: 2px 13px 4px 13px;
+    border-width: 1px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: #0082C4;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.fundo-blog .blog:hover{
+    color: #0082C4;
+    background-color: transparent;
+    background-image: none;
+    border-color: #0082C4;
+}
+
 
 /* MENU */
 
@@ -56,6 +127,7 @@
 .menu .conteudo{
     display: flex;
     align-items: center;
+
 }
 
 
@@ -146,8 +218,16 @@
     font-style: italic;
     color: #1e99d6;
     font-weight: 100%;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
     
 }
+
+.card-noticias .card-noticias-image:hover .card-noticias-data {
+    transform: translateY(20px); /* Move o elemento 20px para baixo */
+    opacity: 0; /* Torna o elemento invisível ao passar o mouse */
+}
+
 
 .conteudo-noticias .card-noticias-image img{
     width: 100%;
@@ -236,23 +316,22 @@
 }
 
 .card-comp-titulo{
-    display: flex; /* Mantém o flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    position: absolute; /* Permite posicionar o texto dentro do contêiner da imagem */
-    bottom: 10px; /* Distância do fundo */
-    width: 100%; /* Garante que o texto ocupe toda a largura */
-    color: white; /* Cor do texto */
-    padding: 6px; /* Adiciona padding ao texto */
-    font-size: 20px; /* Tamanho da fonte */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: absolute; 
+    bottom: 10px; 
+    width: 100%; 
+    color: white; 
+    padding: 6px; 
+    font-size: 20px; 
     font-family: "Ubuntu", sans-serif;
     font-weight: bold;
-    text-align: center; /* Centraliza o texto */
+    text-align: center; 
 
 }
 
-
-
+/*OPORTUNIDADES*/
 
 .oportunidades{
     background-color: transparent;
@@ -263,3 +342,11 @@
     padding: 20px 8px 20px 8px;
 }
 
+.oportunidades h2{
+    font-family: "Ubuntu", Sans-serif !important;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 49px;
+    margin-top: 80px;
+}
