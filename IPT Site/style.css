@@ -113,6 +113,23 @@
     border-color: #0082C4;
 }
 
+.flag{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.flag .flags img{
+    width: 100%; 
+    height: auto;
+}
+
+.flag .es img{
+    width: 70%; 
+    height: auto;
+}
+
 
 /* MENU */
 
@@ -120,7 +137,6 @@
     background-color: transparent;
     background-image: linear-gradient(180deg, #FFFFFF 0%, #DBDBDB 100%);
     height: 55px;
-
     display: flex;
 }
 
@@ -150,6 +166,8 @@
 
 .menu ul li a:hover{
     background: #FFFFFF;
+    padding: 19px;
+    color: #0082C4;
 }
 
 .banner{
@@ -166,7 +184,7 @@
 .noticias-competencias{
     background-color: transparent;
     background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
-    min-height: 1800px;
+    min-height: 1700px;
     color: white;
     width: 100%;
     padding: 20px 8px 20px 8px;
@@ -179,6 +197,7 @@
     text-transform: uppercase;
     line-height: 49px;
     margin-top: 80px;
+    padding: 10px 0px;
 }
 
 
@@ -195,6 +214,7 @@
     border-radius: 10px;
     overflow: hidden;
     padding-bottom: 20px;
+    position: relative;
 }
 
 .conteudo-noticias .card-noticias-image{
@@ -263,6 +283,9 @@
     font-style: italic;
     color: #0082C4;
 
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
 }
 
 .card-noticias .leia-mais .btn:hover{
@@ -331,22 +354,301 @@
 
 }
 
+.svg1 {
+    display: block;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    opacity: 1;
+    fill: #000825;
+    box-sizing: border-box;
+
+    right: 10px;
+}
+
+.svg2{
+    display: block;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -1px);
+
+    opacity: 1;
+    fill: #00315E;
+    box-sizing: border-box;
+
+    right: 10px;
+}
+
+
+
 /*OPORTUNIDADES*/
 
 .oportunidades{
     background-color: transparent;
     background-image: white;
     height: 2000px;
-    color: white;
+    color: #003C6A;
     width: 100%;
     padding: 20px 8px 20px 8px;
 }
 
-.oportunidades h2{
+.oportunidades .conteudo-oportunidades h2{
     font-family: "Ubuntu", Sans-serif !important;
     font-size: 30px;
     font-weight: 900;
     text-transform: uppercase;
     line-height: 49px;
     margin-top: 80px;
+}
+
+.itens-oportunidades{
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.itens-oportunidades .card-oportunidades{
+    flex-basis: 24%; 
+    border-radius: 10px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    height: 600px;
+}
+
+.itens-oportunidades .card-oportunidades h1{
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+#yellow{
+    background-image: url('images/Oportunidades_Cursos_Banners_01.png');
+    background-size: cover;
+    background-position: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFC77;
+}
+
+#amarelo{
+    background-color: #FCA51A;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFC77;
+}
+
+#verde{
+    background-image: url('images/Oportunidades_Editais_Banners_01.png');
+    background-size: cover;
+    background-position: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E9FF77;
+}
+
+#green{
+    background-color: #B8CB33;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E9FF77;
+}
+
+#cyan{
+    background-image: url('images/Oportunidades_Ecossistema_Banners-01.png');
+    background-size: cover;
+    background-position: center; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00F9FF;
+}
+
+#ciano{
+    background-color: #00ABAF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00F9FF;
+}
+
+#vermelho{
+    background-image: url('images/Oportunidades_Facaparte_Banners-01.png');
+    background-size: cover;
+    background-position: center; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FF687D;
+}
+
+#red{
+    background-color: #E12843;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FF687D;
+}
+
+.itens-oportunidades .card-oportunidades .card-oportunidade-conteudo{
+    border-radius: 50px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.image img{
+    width: 20%; 
+    height: auto;
+}
+
+.card-oportunidade-conteudo .image{
+    display: flex; 
+    align-items: center;    
+    color: white;
+}
+
+.card-oportunidade-conteudo .image .space{
+    margin-left: 20px;
+}
+footer{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
+    color: #00315E;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .image{
+    text-align: left;
+    margin-left: 20px;
+}
+
+footer .image img{
+    width: 15%; 
+    height: auto;
+}
+
+footer .link-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .link-icons .quebra{
+    flex-wrap: wrap;
+}
+
+footer .link-icons ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-left: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+footer .link-icons ul .icons-footer {
+    text-align: left;
+}
+
+.fundo-footer .icons-footer {
+    background-color: #0082C4;
+    border-radius: 50px;
+    padding: 8px;
+    color: #00315E;
+}
+
+.fundo-footer .icons-footer:hover {
+    background-color: #00315E;
+    background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
+    color: #0082C4;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0082C4;
+}
+
+footer .links-footer{
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    margin-bottom: 120px;
+}
+
+footer .links-footer .links-final a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+footer .links-footer .links-final a:hover{
+    color: #0082C4;
+}
+
+.retornar-topo {
+    margin-right: 20px;
+    margin-bottom: 220px;
+}
+
+.retornar-topo .topo .voltar {
+    background-color: white;
+    color: #003C6A;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.retornar-topo .topo .voltar:hover {
+    background-color: #00315E;
+    background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
+    color: #0082C4;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #0082C4;
+}
+
+footer .text{
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 400;
+    line-height: 1.3em;
+    font-size: 14px;
+}
+
+footer .cadastre{
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 70px;
+}
+footer .cadastre .button{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #0082C4 0%, #003C6A 100%);
+    color: white;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #0082C4;
+    padding: 5px 15px;
+    font-family: "Ubuntu", Sans-serif;
+    font-size: 13px;
+    line-height: 1.2em;
+    font-weight: 400;
+    font-style: italic;
+}
+
+footer .cadastre .button:hover{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #00082500 0%, #00082500 100%);
+    color: #0082C4;
+}
+
+footer .direito-autorais p{
+    font-size: 12px;
+    line-height: 15px;
 }
