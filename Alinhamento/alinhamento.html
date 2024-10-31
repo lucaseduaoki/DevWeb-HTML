@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento</title>
+
+
+    <style>
+
+        .container{
+            display: flex;
+            background-color: lightblue;
+            height: 500px;
+            border-radius: 10px;
+            justify-content: space-evenly;
+        }
+
+        .item{
+            margin: 10px;
+            font-size: 40px;
+            color: black;
+            background-color: orange;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .item:nth-child(1){
+            align-self: flex-start;
+        }
+
+        .item:nth-child(2){
+            align-self: stretch;
+        }
+
+        .item:nth-child(3){
+            align-self: center;
+        }
+
+        .item:nth-child(4){
+            align-self: end;
+        }
+
+        .item:nth-child(5){
+            align-self: flex-start;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+
+
+    </style>
+</head>
+
+
+<body>
+    
+    <h1>Itens</h1>
+    <div class="container">
+        
+        <div class="item"> A </div>
+        <div class="item"> B </div>
+        <div class="item"> C </div>
+        <div class="item"> D </div>
+        <div class="item"> E </div>
+    </div>
+
+</body>
+</html>
