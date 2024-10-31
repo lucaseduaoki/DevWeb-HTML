@@ -23,6 +23,7 @@
     height: 120px;
     background-color: transparent;
     background-image: linear-gradient(180deg, #FFFFFF 0%, #DBDBDB 100%);
+    
 }
 
 
@@ -31,6 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .cabecalho .conteudo .logo{
@@ -353,172 +355,27 @@
     text-align: center; 
 
 }
-
 .svg1 {
-    display: block;
+    display: block;     
     width: 100%;
-    position: relative;
+    max-width: 100%;
+    height: auto;
+    position: relative; 
     left: 50%;
     transform: translateX(-50%);
-
+    
     opacity: 1;
     fill: #000825;
     box-sizing: border-box;
-
-    right: 10px;
 }
 
-.svg2{
-    display: block;
-    width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, -1px);
-
-    opacity: 1;
-    fill: #00315E;
-    box-sizing: border-box;
-
-    right: 10px;
-}
-
-
-
-/*OPORTUNIDADES*/
-
-.oportunidades{
-    background-color: transparent;
-    background-image: white;
-    height: 2000px;
-    color: #003C6A;
-    width: 100%;
-    padding: 20px 8px 20px 8px;
-}
-
-.oportunidades .conteudo-oportunidades h2{
-    font-family: "Ubuntu", Sans-serif !important;
-    font-size: 30px;
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 49px;
-    margin-top: 80px;
-}
-
-.itens-oportunidades{
-    display: flex; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
-}
-
-.itens-oportunidades .card-oportunidades{
-    flex-basis: 24%; 
-    border-radius: 10px;
-    overflow: hidden;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    height: 600px;
-}
-
-.itens-oportunidades .card-oportunidades h1{
-    text-align: center;
-    color: white;
-    margin-top: 40px;
-    margin-bottom: 25px;
-}
-
-#yellow{
-    background-image: url('images/Oportunidades_Cursos_Banners_01.png');
-    background-size: cover;
-    background-position: center;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #FFFC77;
-}
-
-#amarelo{
-    background-color: #FCA51A;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #FFFC77;
-}
-
-#verde{
-    background-image: url('images/Oportunidades_Editais_Banners_01.png');
-    background-size: cover;
-    background-position: center;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #E9FF77;
-}
-
-#green{
-    background-color: #B8CB33;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #E9FF77;
-}
-
-#cyan{
-    background-image: url('images/Oportunidades_Ecossistema_Banners-01.png');
-    background-size: cover;
-    background-position: center; 
-    border-style: solid;
-    border-width: 1px;
-    border-color: #00F9FF;
-}
-
-#ciano{
-    background-color: #00ABAF;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #00F9FF;
-}
-
-#vermelho{
-    background-image: url('images/Oportunidades_Facaparte_Banners-01.png');
-    background-size: cover;
-    background-position: center; 
-    border-style: solid;
-    border-width: 1px;
-    border-color: #FF687D;
-}
-
-#red{
-    background-color: #E12843;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #FF687D;
-}
-
-.itens-oportunidades .card-oportunidades .card-oportunidade-conteudo{
-    border-radius: 50px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
-}
-
-.image img{
-    width: 20%; 
-    height: auto;
-}
-
-.card-oportunidade-conteudo .image{
-    display: flex; 
-    align-items: center;    
-    color: white;
-}
-
-.card-oportunidade-conteudo .image .space{
-    margin-left: 20px;
-}
 footer{
     background-color: transparent;
     background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
     color: #00315E;
     text-align: center;
     padding: 10px 0;
+    font-family: "Ubuntu", sans-serif;
 }
 
 footer .image{
@@ -612,6 +469,7 @@ footer .links-footer .links-final a:hover{
 }
 
 footer .text{
+    font-family: "Ubuntu", sans-serif;
     text-align: left;
     margin-left: 30px;
     margin-bottom: 20px;
