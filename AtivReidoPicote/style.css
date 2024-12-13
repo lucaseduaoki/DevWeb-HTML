@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+body{
+    font-family: 'Segoe UI';
+    margin: 0;
+    padding: 0;
+}
+
+.splash-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 1s ease; 
+}
+
+.splash-screen img {
+    width: 200px; 
+    height: 300px;
+    margin-bottom: 20px;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.splash-screen h1{
+    font-family: "Viaoda Libre";
+    font-size: 35px;
+}
+
+.container{
+    display: none;
+}
+
+.telaLogin{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(barberimg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.telaLogin img{
+    width: 110px; 
+    height: 110px;
+    margin-bottom: 20px;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.loginBox{
+    background-color: black;
+    padding: 35px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 220px; 
+    height: 270px;
+}
+
+.container h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -10px; 
+    color: white;
+}
+
+label {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 3px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 3px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+input::placeholder{
+    font-size: 12px;
+    color: #888;
+}
+
+a{
+    display: block;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container2{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(barberimg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+@media screen and (max-width: 320px) {
+    .splash {
+        font-size: 30px; 
+        padding: 10px;
+    }
+
+    .splash img {
+        width: 200px; 
+        margin-bottom: 20px;
+    }
+    .splash-screen h1{
+        font-family: "Viaoda Libre";
+        font-size: 20px;
+    }
+
+    .loginBox{
+        background-color: black;
+        padding: 35px;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 170px; 
+        height: 240px;
+    }
+
+    label {
+        font-size: 14px;
+        color: white;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 3px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+}
