@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+body {
+    font-family: 'Segoe UI';
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Tela Splash */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s linear 1s;
+}
+
+.splash-screen img {
+    width: 200px;
+    height: 300px;
+    margin-bottom: 20px;
+    transform: rotate(-90deg);
+}
+
+.splash-screen h1 {
+    font-family: "Viaoda Libre";
+    font-size: 35px;
+}
+
+
+
+
+/* Tela de Login */
+.container {
+    display: none;
+}
+
+.telaLogin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/barberimg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.telaLogin img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 20px;
+    transform: rotate(-90deg);
+}
+
+.loginBox {
+    background-color: black;
+    padding: 35px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 220px;
+    height: 290px;
+}
+
+.container h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    color: white;
+}
+
+label {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 3px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 3px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    font-size: 12px;
+    color: #888;
+}
+
+a {
+    display: block;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* Home */
+.cabecalho {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cabecalho img {
+    width: 70px;
+    height: 100px;
+    margin-bottom: 20px;
+    transform: rotate(-90deg);
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.cabecalho ul {
+    flex-basis: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin-top: 15px;
+    gap: 30px;
+}
+
+.cabecalho ul li {
+    display: inline block;
+}
+
+.cabecalho ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 2px 5px;
+}
+
+.icon-hamb{
+    display: none;
+}
+
+
+
+
+.main-screen{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/barberimg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Serviços */
+.conteudo-servicos {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/barberimg.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+
+.conteudo-servicos h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.servico h2 {
+    color: white;
+    font-family: "Viaoda Libre";
+    font-weight: 600px;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.servico p {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.servicos-container a {
+    text-decoration: none;
+}
+
+.servicos-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+
+}
+
+.servico {
+    background-color: #222;
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+
+/* Agendamento */
+.conteudo-agendamento {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/barberimg.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+
+.conteudo-agendamento h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 50px; 
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.agenda-box {
+    background-color: black;
+    padding: 20px;
+    border-radius: 12px; 
+    width: 100%;
+    max-width: 300px; 
+    height: auto; 
+}
+
+.conteudo-agendamento label {
+    font-size: 14px; 
+    color: white;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    height: 25px;
+    padding: 10px; 
+    margin-bottom: 15px;
+    font-size: 14px; 
+    background-color: white;
+    color: black;
+}
+
+select {
+    height: 40px;
+    appearance: none; 
+    background-color: #f5f5f5;
+    padding-right: 25px; 
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color:dodgerblue;
+    font-size: 14px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+
+
+
+/* Barbeiros */
+.barbeiros-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/barberimg.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+
+.barbeiros-container h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 50px; 
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.barbeiro-card {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.barbeiro-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.barbeiro-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.barbeiro-info h2 {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.barbeiro-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: white;
+}
+
+
+
+
+
+
+
+/* Galeria */
+.container-galeria{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/barberimg.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.container-galeria h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.lista-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px; 
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lista-img img{
+    width: 100%; 
+    min-width: 200px;
+    height: 300px; 
+    border-radius: 10px; 
+    border: 3px solid;
+    border-color: black;
+    
+}
+
+.lista-img img:hover{
+    transform: scale(1.05); 
+    cursor: pointer;
+}
+
+
+
+/* Histórico */
+.container-historico{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/barberimg.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.container-historico h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.agendamentos-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.historico-card {
+    color: white;
+    background-color: black;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    height: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.historico-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.historico-card p {
+    margin: 5px 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .cabecalho {
+        height: 100px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        position: relative;
+    }
+
+    .cabecalho img {
+        margin: 0;
+        width: 50px;
+        height: 80px;
+    }
+
+    .cabecalho ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: black;
+    }
+
+    .cabecalho ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .icon-hamb {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+        cursor: pointer;
+        padding-right: 30px;
+    }
+
+    .icon-hamb img {
+        width: 30px;
+        height: 30px;
+        transform: rotate(90deg);
+    }
+
+    .cabecalho.active ul {
+        display: flex;
+    }
+}
