@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rei do picote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="home.html"><img src="images/LogoBarber.png" alt=""></a>
+    
+        <div class="icon-hamb">
+            <img src="images/nav.png" alt="Menu Hamburguer">
+        </div>
+    
+        <ul>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="agendamentos.html">Agendar</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="barbeiros.html">Nossos Barbeiros</a></li>
+            <li><a href="historico.html">Histórico</a></li>
+        </ul>
+    </header>
+    <div class="conteudo-agendamento">
+        <h1>AGENDAMENTO</h1>
+        <div class="agenda-box">
+            <form id="agendamento">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome">
+
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone" id="telefone">
+
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data">
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora">
+
+                <label for="servico">Serviço</label>
+                <select name="servico" id="servico">
+                    <option value="corte">Corte de cabelo</option>
+                    <option value="barba">Barba Modelada</option>
+                    <option value="colorir">Coloração</option>
+                    <option value="hidratar">Hidratação</option>
+                </select>
+
+                <button type="submit">Agendar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
