@@ -1,9 +1,34 @@
 .sidebar {
+    position: relative;
     transition: transform 0.3s ease-in-out;
+    padding-left: 5px;
+    min-height: 100vh;
+}
+
+.sidebar logo{
+    display: flex;               
+    align-items: center; 
+}
+
+.sidebar img{
+    height: 100%;
+    width: 80px;
+    margin-left: -20; /* Ensure no margin to the left */
+}
+
+.sidebar .name-logo {
+    color: white;      
+    font-size: 40px;      
+    margin-left: -11px !important;
+    margin-top: 24px !important;     
+}
+
+.sidebar h2{
+    margin-top: 20px; 
 }
 
 .sidebar ul {
-    margin-top: 30px;
+    margin-top: 20px;
     list-style: none; 
     padding-left: 5px; 
     display: flex; 
@@ -26,7 +51,17 @@
 }
 
 .navbar{
-    background-color: grey;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+.card {
+    margin-bottom: 20px; /* Adjust this value to increase/decrease space */
+}
+
+.row {
+    margin-bottom: 20px; /* Adjust this value as needed */
 }
 
 
