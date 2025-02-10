@@ -7,7 +7,6 @@
     <title>IF Store</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -24,6 +23,7 @@
                 </div>
                 <h2>Painel</h2>
                 <ul>
+                    <li><a href="index.html">Painel Administrativo</a></li>
                     <li><a href="cadastro-produto.html">Cadastro de Produto</a></li>
                     <li><a href="listagem-produto.html">Listagem de Produtos</a></li>
                     <li><a href="perfil-usuario.html">Perfil do Usuário</a></li>
@@ -46,70 +46,108 @@
                     </nav>
                 </div>
 
-                <!-- CONTENT -->
-                <div class="row">
-
-                    <div class="col-xl-3 col-sm-6 col-12">
-                        <div class="card mb-4">
-                          <div class="card-body d-flex align-items-center p-0">
-                            <div class="stats-icon bg-primary">
-                              <i class="bi bi-pie-chart fs-2 text-white"></i>
-                            </div>
-                            <div class="py-4">
-                              <h5 class="text-secondary fw-light mb-1">Visitors</h5>
-                              <h1 class="m-0">6650</h1>
-                            </div>
-                            <span class="badge bg-primary-subtle text-primary position-absolute top-0 end-0 m-3"><i class="bi bi-caret-up-fill"></i>18%</span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Tarefa 1</h5>
-                                <div class="progress" role="progress-bar" aria-valuenow="75" aria-valuemin="0"
-                                    aria-valuemax="100" style="height: 8px;">
-                                    <div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"></div>
-                                </div>
-                                <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#detalhes">
-                                    Detalhes
-                                </button>
-                            </div>
+                <div class="row m-3 align-items-center">
+                    <!-- Gráfico à Esquerda -->
+                    <div class="col-md-8">
+                        <div>
+                            <canvas id="myChart" class="w-100"></canvas>
                         </div>
                     </div>
 
-
-
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Tarefa 1</h5>
-                                <div class="progress" role="progress-bar" aria-valuenow="75" aria-valuemin="0"
-                                    aria-valuemax="100" style="height: 8px;">
-                                    <div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"></div>
+                    <!-- Cards de Tarefa à Direita -->
+                    <div class="col-md-4">
+                        <!-- Card 1 -->
+                        <div class="card-tarefa mb-4">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="m-b-25">Vendas</h6>
+                                    <h3 class="f-w-700 text-c-blue">75.500</h3>
+                                    <p class="m-b-0">08/02/2025</p>
                                 </div>
-                                <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#detalhes">
-                                    Detalhes
-                                </button>
+                                <div class="col-auto">
+                                    <i class="fas fa-tasks bg-c-blue"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2-->
+                        <div class="card-tarefa mb-4">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="m-b-25">Valor arrecadado</h6>
+                                    <h3 class="f-w-700 text-c-blue">R$428.540,50</h3>
+                                    <p class="m-b-0">08/02/2025</p>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-tasks bg-c-blue"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="card-tarefa mb-4">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="m-b-25">Visitas</h6>
+                                    <h3 class="f-w-700 text-c-blue">340.000</h3>
+                                    <p class="m-b-0">08/02/2025</p>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-tasks bg-c-blue"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="card-tarefa mb-4">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="m-b-25">Margem de lucro</h6>
+                                    <h3 class="f-w-700 text-c-blue">84%</h3>
+                                    <p class="m-b-0">08/02/2025</p>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-tasks bg-c-blue"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
 
+                <div class="col-md-12 col-xl-4">
+                    <div class="card card-blue text-white">
+                        <div class="card-block p-b-0">
+                            <div class="row m-b-50">
+                                <div class="col">
+                                    <h6 class="m-b-5">Vendas em Janeiro</h6>
+                                    <h5 class="m-b-0 f-w-700">R$73.580,00</h5>
+                                </div>
+                                <div class="col-auto text-center">
+                                    <p class="m-b-5">Vendas Diretas</p>
+                                    <h5 class="m-b-0">R$23.600,00</h5>
+                                </div>
+                                <div class="col-auto text-center">
+                                    <p class="m-b-5">Margem de perda</p>
+                                    <h5 class="m-b-0">R$1.520,00</h5>
+                                </div>
+                            </div>
 
-                <!-- CONTENT -->
-                <div class="row m-3">
-                    <div>
-                        <canvas id="myChart"></canvas>
+                            <div id="sec-ecommerce-chart-line" style="height: 60px; padding: 0px; position: relative;">
+                                <canvas id="lineChart" width="665" height="120"></canvas>
+                            </div>
+
+                            <div id="sec-ecommerce-chart-bar" style="height: 195px; padding: 0px; position: relative;">
+                                <canvas id="barChart" width="665" height="390"></canvas>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
+
+
+
         </div>
+    </div>
     </div>
 
     <!-- Modal -->
@@ -137,6 +175,10 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flot"></script>
+
+
 
 
     <script>
@@ -154,11 +196,11 @@
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['Setembro', 'Outubro', 'Novembro', 'Dezembro', 'Janeiro', 'Fevereiro'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1
+                    label: '# de arrecadação',
+                    data: [10, 4, 14, 19, 12, 8],
+                    borderWidth: 3
                 }]
             },
             options: {
