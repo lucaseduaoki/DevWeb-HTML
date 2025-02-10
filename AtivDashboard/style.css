@@ -1,81 +1,226 @@
+body{
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
 .sidebar {
     position: relative;
     transition: transform 0.3s ease-in-out;
     padding-left: 5px;
     min-height: 100vh;
+    will-change: transform;
 }
 
-.sidebar logo{
-    display: flex;               
-    align-items: center; 
+.sidebar logo {
+    display: flex;
+    align-items: center;
 }
 
-.sidebar img{
+.sidebar img {
     height: 100%;
     width: 80px;
-    margin-left: -20; /* Ensure no margin to the left */
+    margin-left: -10px;
+    /* Ensure no margin to the left */
 }
 
 .sidebar .name-logo {
-    color: white;      
-    font-size: 40px;      
+    color: white;
+    font-size: 40px;
     margin-left: -11px !important;
-    margin-top: 24px !important;     
+    margin-top: 24px !important;
 }
 
-.sidebar h2{
-    margin-top: 20px; 
+.sidebar h2 {
+    margin-top: 20px;
 }
 
 .sidebar ul {
     margin-top: 20px;
-    list-style: none; 
-    padding-left: 5px; 
-    display: flex; 
-    flex-direction: column; 
+    list-style: none;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
 }
 
 .sidebar ul li {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .sidebar ul li a {
     color: aliceblue;
     text-decoration: none;
-    transition: color 0.2s ease; 
-    }
+    transition: color 0.2s ease;
+}
 
 .sidebar ul li a:hover {
     color: #23527c;
 }
 
-.navbar{
+.navbar {
     background-color: black;
     color: white;
     font-size: 20px;
 }
 
+
+#myChart {
+    height: 450px !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: -100px;
+}
+
+/* Card Tarefa */
+.card-tarefa {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+}
+
+.card-tarefa:hover {
+    transform: translateY(-5px);
+}
+
+
+.col-md-4 h3 {
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 0;
+}
+
+/* Descrição da Tarefa */
+.col-md-4 p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+
+
+/* Card azul */
+.card-blue {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -115px;
+    padding: 15px;
+    height: 100px;
+    width: 780px;
+    margin-left: 25px;
+}
+
+
+.card-blue .card-block {
+    padding: 10px 20px;
+}
+
+.card-blue .row {
+    margin-bottom: 0;
+}
+
+.card-blue .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Alinha os itens verticalmente */
+}
+
+.card-blue h5 {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.card-blue h6 {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.card-blue p {
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+
+
+/*Cadastro de Produtos*/
+
+body {
+    background-color: #f4f7fc;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+}
+
 .card {
-    margin-bottom: 20px; /* Adjust this value to increase/decrease space */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.row {
-    margin-bottom: 20px; /* Adjust this value as needed */
+.card-header {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], textarea {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
 
-@media (max-width: 995px){
 
-    .sidebar{
+
+
+/* Sidebar Responsiva */
+@media (max-width: 995px) {
+    .sidebar {
         position: fixed;
         transform: translateX(-100%);
         z-index: 1;
     }
 
-    .sidebar.show{
+    .sidebar.show {
         transform: translateX(0);
     }
-
-
 }
