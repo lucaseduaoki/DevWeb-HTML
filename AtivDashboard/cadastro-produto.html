@@ -27,7 +27,7 @@
                     <li><a href="cadastro-produto.html">Cadastro de Produto</a></li>
                     <li><a href="listagem-produto.html">Listagem de Produtos</a></li>
                     <li><a href="perfil-usuario.html">Perfil do Usuário</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="login.html">Login/Cadastrar</a></li>
                 </ul>
             </div>
 
@@ -88,38 +88,48 @@
     </div>
 
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
-            <script>
-                let toggleMenu = document.getElementById('toggleMenu');
-                let sidebar = document.querySelector('.sidebar');
+    <script>
+        let toggleMenu = document.getElementById('toggleMenu');
+        let sidebar = document.querySelector('.sidebar');
 
-                toggleMenu.addEventListener('click', () => {
-                    sidebar.classList.toggle('show')
+        toggleMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('show')
+        });
+    </script>
 
+    <script>
+        document.getElementById('formCadastroProduto').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-                    /*Salvar cadastro*/
-                    document.getElementById('formCadastroProduto').addEventListener('submit', function (e) {
-                        e.preventDefault();
+            const nomeProduto = document.getElementById('nomeProduto').value;
+            const descricaoProduto = document.getElementById('descricaoProduto').value;
+            const precoProduto = document.getElementById('precoProduto').value;
+            const imagemProduto = document.getElementById('imagemProduto').files[0];
 
-                        const nomeProduto = document.getElementById('nomeProduto').value;
-                        const descricaoProduto = document.getElementById('descricaoProduto').value;
-                        const precoProduto = document.getElementById('precoProduto').value;
-                        const imagemProduto = document.getElementById('imagemProduto').files[0];
+            const reader = new FileReader();
+            reader.readAsDataURL(imagemProduto);
+            reader.onload = function () {
+                let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
 
-                        // Simulação de envio
-                        console.log('Produto cadastrado:');
-                        console.log('Nome:', nomeProduto);
-                        console.log('Descrição:', descricaoProduto);
-                        console.log('Preço:', precoProduto);
-                        console.log('Imagem:', imagemProduto.name);
+                let novoProduto = {
+                    nome: nomeProduto,
+                    descricao: descricaoProduto,
+                    preco: precoProduto,
+                    imagem: reader.result 
+                };
 
-                        alert('Produto cadastrado com sucesso!');
-                    });
-                });
-            </script>
+                produtos.push(novoProduto);
+                localStorage.setItem("produtos", JSON.stringify(produtos));
+
+                alert('Produto cadastrado com sucesso!');
+                document.getElementById('formCadastroProduto').reset();
+            };
+        });
+    </script>
+
 </body>
-
 </html>
