@@ -1,5 +1,5 @@
 body{
-    height: 100px;
+    height: 100vh;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -22,7 +22,6 @@ body{
     height: 100%;
     width: 80px;
     margin-left: -10px;
-    /* Ensure no margin to the left */
 }
 
 .sidebar .name-logo {
@@ -132,7 +131,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Alinha os itens verticalmente */
 }
 
 .card-blue h5 {
@@ -210,6 +208,85 @@ button[type="submit"]:hover {
 
 
 
+/* Login */
+
+/* Tela de fundo */
+.login-screen {
+    background-image: url('fundo-de-tela-dark.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: Arial, sans-serif;
+    padding-top: 53px;
+}
+
+
+.container-login {
+    background-color: black;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 320px;
+    height: 430px;
+    transition: transform 0.3s ease;
+}
+
+.container-login:hover {
+    transform: scale(1.03);
+}
+
+.area-input {
+    margin: 12px 0;
+    text-align: left;
+}
+
+.area-input label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.area-input input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    margin-top: 60px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+#mensagem {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
 
 
 /* Sidebar Responsiva */
