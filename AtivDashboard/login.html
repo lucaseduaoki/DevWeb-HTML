@@ -13,54 +13,48 @@
 
 <body>
 
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="sidebar col-6 col-lg-2 bg-dark text-bg-dark p-3">
-                <div class="logo d-flex align-items-center">
-                    <img src="if.png" alt="">
-                    <h1 class="name-logo">Store</h1>
-                </div>
-                <h2>Painel</h2>
-                <ul>
-                    <li><a href="index.html">Painel Administrativo</a></li>
-                    <li><a href="cadastro-produto.html">Cadastro de Produto</a></li>
-                    <li><a href="listagem-produto.html">Listagem de Produtos</a></li>
-                    <li><a href="perfil-usuario.html">Perfil do Usuário</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
+    <div class="login-screen">
+        <div class="container-login">
+            <h2>Bem-vindo!</h2>
+            <p>Faça login para acessar o sistema</p>
+            <form id="formulario-login">
+            <div class="area-input">
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" required>
             </div>
-
-
-            <div class="col-12 col-lg-10">
-                <div class="container-nav m-0 p-0"></div>
-                <!-- Navbar -->
-                <div class="row">
-                    <nav class="navbar">
-                        <div class="container-fluid">
-                            <span class="navbar">Login</span>
-                            <button class="btn btn-dark float-end d-lg-none" id="toggleMenu">
-                                <span>Menu</span>
-                            </button>
-                        </div>
-                    </nav>
-                </div>
+            <div class="area-input">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" required>
             </div>
+            <button type="submit">Entrar</button>
+            </form>
+            <p id="mensagem"></p>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
-    <script>
-        let toggleMenu = document.getElementById('toggleMenu');
-        let sidebar = document.querySelector('.sidebar');
-
-        toggleMenu.addEventListener('click', () => {
-            sidebar.classList.toggle('show')
-        });
-    </script>
 </body>
 
+
+<script>
+    document.getElementById("formulario-login").addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita recarregar a página
+
+        const usuario = document.getElementById("usuario").value;
+        const senha = document.getElementById("senha").value;
+
+        // Usuário e senha fixos para teste
+        const usuarioCorreto = "admin";
+        const senhaCorreta = "1234";
+
+        if (usuario === usuarioCorreto && senha === senhaCorreta) {
+            document.getElementById("mensagem").innerText = "Login bem-sucedido!";
+            document.getElementById("mensagem").style.color = "green";
+            setTimeout(() => {
+                window.location.href = "index.html"; // Redireciona para a página principal
+            }, 1000);
+        } else {
+            document.getElementById("mensagem").innerText = "Usuário ou senha incorretos.";
+            document.getElementById("mensagem").style.color = "red";
+        }
+    });
+</script>
 </html>
