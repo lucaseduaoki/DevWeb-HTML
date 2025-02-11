@@ -1,14 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IF Store</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Perfil do Usuário - IF Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -16,6 +14,7 @@
     <div class="container-fluid">
         <div class="row">
 
+            <!-- Sidebar -->
             <div class="sidebar col-6 col-lg-2 bg-dark text-bg-dark p-3">
                 <div class="logo d-flex align-items-center">
                     <img src="if.png" alt="">
@@ -31,19 +30,24 @@
                 </ul>
             </div>
 
+            <!-- Conteúdo principal -->
+            <div class="col-12 col-lg-10 d-flex justify-content-center align-items-center">
+                <div class="container-profile text-center p-4 shadow-lg bg-white rounded">
+                    <img src="luffy.jpeg" class="rounded-circle mb-3" width="120" height="120" alt="Foto do Usuário">
+                    <h2>lucasaok10</h2>
+                    <p class="text-muted">lucasaoki@gmail.com</p>
 
-            <div class="col-12 col-lg-10">
-                <div class="container-nav m-0 p-0"></div>
-                <!-- Navbar -->
-                <div class="row">
-                    <nav class="navbar">
-                        <div class="container-fluid">
-                            <span class="navbar">Perfil do Usuário</span>
-                            <button class="btn btn-dark float-end d-lg-none" id="toggleMenu">
-                                <span>Menu</span>
-                            </button>
-                        </div>
-                    </nav>
+                    <hr>
+
+                    <div class="text-start">
+                        <p><strong>Nome:</strong> Lucas Eduardo Aoki</p>
+                        <p><strong>Email:</strong> lucasaoki@gmail.com</p>
+                        <p><strong>Telefone:</strong> (43) 982418122</p>
+                        <p><strong>Endereço:</strong> Rua das Alamedas, 123 - Foz do Iguaçu/PR</p>
+                    </div>
+
+                    <button class="btn btn-primary mt-3">Editar Perfil</button>
+                    <button class="btn btn-danger mt-2">Sair</button>
                 </div>
             </div>
         </div>
@@ -62,5 +66,4 @@
         });
     </script>
 </body>
-
 </html>
